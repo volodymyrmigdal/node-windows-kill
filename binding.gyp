@@ -1,22 +1,22 @@
 {
     "targets": [
         {
-            "target_name": "windows-kill",
+            "target_name": "wwindowskill",
             "product_extension": "node",
             "defines": [ "V8_DEPRECATION_WARNINGS=1" ],
             "include_dirs": [
                 "<!(node -e require('nan'))",
-                "src/windows-kill-library/"
+                "src/wwindowskill-library/"
             ],
             "libraries": [ "-lDbghelp" ],
             "sources": [
-                "src/windows-kill-library/windows-kill-library.cpp",
-                "src/windows-kill-library/signal.cpp",
-                "src/windows-kill-library/sender.cpp",
-                "src/windows-kill-library/ctrl-routine.cpp",
-                "src/windows-kill-library/remote-process.cpp",
-                "src/windows-kill-library/stdafx.cpp",
-                "src/node-windows-kill.cpp"
+                "src/wwindowskill-library/wwindowskill-library.cpp",
+                "src/wwindowskill-library/signal.cpp",
+                "src/wwindowskill-library/sender.cpp",
+                "src/wwindowskill-library/ctrl-routine.cpp",
+                "src/wwindowskill-library/remote-process.cpp",
+                "src/wwindowskill-library/stdafx.cpp",
+                "src/node-wwindowskill.cpp"
             ],
             "configurations": {
                 "Release": {

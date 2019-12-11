@@ -1,7 +1,7 @@
 var ava = require('ava');
 var test = ava.test;
 
-var WindowsKillClass = require('../lib/windows-kill-class');
+var WindowsKillClass = require('../lib/wwindowskill-class');
 var windowsKill = new WindowsKillClass({
     replaceNodeKill: true
 });

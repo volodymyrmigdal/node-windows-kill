@@ -46,13 +46,13 @@ test('should throw exception when sending SIGINT with invalid pid using process.
 
 test('should throw exception when sending SIGBREAK signal to not existing pid', function (t) {
     var error = t.throws(function () { windowsKill(-1, 'SIGBREAK'); }, Error, 'Exception error is instance of Error');
-    t.is(error.message, 'windows-kill ESRCH');
+    t.is(error.message, 'wwindowskill ESRCH');
     t.pass();
 });
 
 test('should throw exception when sending SIGINT signal to not existing pid', function (t) {
     var error = t.throws(function () { windowsKill(-1, 'SIGINT'); }, Error, 'Exception error is instance of Error');
-    t.is(error.message, 'windows-kill ESRCH');
+    t.is(error.message, 'wwindowskill ESRCH');
     t.pass();
 });
 

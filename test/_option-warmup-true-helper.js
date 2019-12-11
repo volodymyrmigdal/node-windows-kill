@@ -1,4 +1,4 @@
-var WindowsKillClass = require('../lib/windows-kill-class');
+var WindowsKillClass = require('../lib/wwindowskill-class');
 
 var noop = function () { };
 

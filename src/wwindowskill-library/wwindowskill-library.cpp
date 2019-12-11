@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "windows-kill-library.h"
+#include "wwindowskill-library.h"
 #include "signal.h"
 #include "sender.h"
 

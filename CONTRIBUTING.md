@@ -1,5 +1,5 @@
 # Contributing
-Want to contribute to **node-windows-kill**? Awesome!
+Want to contribute to **node-wwindowskill**? Awesome!
 There are many ways you can contribute, see below.
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.

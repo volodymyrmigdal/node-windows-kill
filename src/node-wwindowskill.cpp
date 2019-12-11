@@ -1,6 +1,6 @@
 #include <nan.h>
 #include <stdexcept>
-#include "windows-kill-library.h"
+#include "wwindowskill-library.h"
 
 using WindowsKillLibrary::sendSignal;
 using WindowsKillLibrary::warmUp;

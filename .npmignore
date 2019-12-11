@@ -3,7 +3,7 @@
 build/
 coverage/
 development/
-lib/binding/windows-kill.node
+lib/binding/wwindowskill.node
 other/
 test/
 .editorconfig
