@@ -20,8 +20,8 @@ void send(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 		return;
 	}
 
-	DWORD signal_pid = (DWORD)info[0]->NumberValue();
-	DWORD signal_type = (DWORD)info[1]->NumberValue();
+	DWORD signal_pid = (DWORD)info[0]->NumberValue(Nan::GetCurrentContext()).FromJust();
+	DWORD signal_type = (DWORD)info[1]->NumberValue(Nan::GetCurrentContext()).FromJust();
 
 	try {
 		if (signal_type == 1) {
@@ -68,10 +68,25 @@ void warmUp(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 }
 
 void Init(v8::Local<v8::Object> exports) {
-	exports->Set(Nan::New("send").ToLocalChecked(),
-		Nan::New<v8::FunctionTemplate>(send)->GetFunction());
-    exports->Set(Nan::New("warmUp").ToLocalChecked(),
-		Nan::New<v8::FunctionTemplate>(warmUp)->GetFunction());
+	
+	v8::Local<v8::Context> context = exports->CreationContext();
+	
+	exports->Set(context,
+               Nan::New("send").ToLocalChecked(),
+               Nan::New<v8::FunctionTemplate>(send)
+                   ->GetFunction(context)
+                   .ToLocalChecked());
+									 
+	exports->Set(context,
+               Nan::New("warmUp").ToLocalChecked(),
+               Nan::New<v8::FunctionTemplate>(warmUp)
+                   ->GetFunction(context)
+                   .ToLocalChecked());								 
+									 
+	// exports->Set(Nan::New("send").ToLocalChecked(),
+	// 	Nan::New<v8::FunctionTemplate>(send)->GetFunction());
+  //   exports->Set(Nan::New("warmUp").ToLocalChecked(),
+	// 	Nan::New<v8::FunctionTemplate>(warmUp)->GetFunction());
 }
 
 NODE_MODULE(windowskill, Init)
