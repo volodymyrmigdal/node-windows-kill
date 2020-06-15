@@ -20,7 +20,8 @@ jobs :
       with :
         node-version : ${{ matrix.node-version }}
     - run : npm install -g npm@latest
-    - run : npm i
+    - run : npm i --ignore-scripts
+    - run : npm run node-pre-gyp-build
     - run : npm test
     - run : npm run node-pre-gyp-package && npm run node-pre-gyp-github-release
       env :

@@ -37,6 +37,7 @@
     "install": "node scripts/install.js",
     "install-native": "node-pre-gyp install --fallback-to-build",
     "build-native-dev": "node-pre-gyp install --build-from-source",
+    "node-pre-gyp-build": "node-pre-gyp configure && node-pre-gyp rebuild",
     "node-pre-gyp-package": "node-pre-gyp package",
     "node-pre-gyp-github-release": "node-pre-gyp-github publish --release",
     "test": "nyc ava",
