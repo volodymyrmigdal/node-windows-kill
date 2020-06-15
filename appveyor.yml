@@ -18,7 +18,7 @@ os: Visual Studio 2015
 
 install:
   - ps: Install-Product node $env:nodejs_version $env:platform
-  - npm i npm@5 -g
+  - npm i npm -g
   - set PATH=%APPDATA%\npm;%PATH%
 
 build_script:
